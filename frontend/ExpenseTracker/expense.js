@@ -49,6 +49,7 @@ window.addEventListener("DOMContentLoaded", () => {
   if (isadmin) {
     showPremiumUserMessage();
     showLeaderboard();
+    download();
   }
   axios
     .get("http://localhost:3000/expense/getexpenses", {
@@ -183,6 +184,7 @@ document.getElementById("rzp-button1").onclick = async function (e) {
       // localStorage.setItem("isadmin", true);
       localStorage.setItem("token", res.data.token);
       showLeaderboard();
+      download();
     },
   };
   const rzp1 = new Razorpay(options);
