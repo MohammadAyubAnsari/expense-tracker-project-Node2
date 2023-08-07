@@ -184,7 +184,7 @@ document.getElementById("rzp-button1").onclick = async function (e) {
       // localStorage.setItem("isadmin", true);
       localStorage.setItem("token", res.data.token);
       showLeaderboard();
-      download();
+      // download();
     },
   };
   const rzp1 = new Razorpay(options);
